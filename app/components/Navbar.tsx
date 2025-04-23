@@ -1,0 +1,49 @@
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const links = [
+  { name: 'About', href: '#about' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Contact', href: '#contact' },
+];
+
+export default function Navbar() {
+  const path = usePathname();
+
+  return (
+    <nav className="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-md">
+      <div className="max-w-4xl mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo / Brand */}
+        <Link href="/" className="text-2xl font-bold text-white">
+          Divij
+        </Link>
+
+        {/* Nav Links */}
+        <div className="flex space-x-8">
+          {links.map((link) => {
+            const isActive = path === link.href;
+            return (
+              <Link key={link.href} href={link.href} className="relative group">
+                <span
+                  className={`font-medium transition-colors ${
+                    isActive ? 'text-[#8b5cf6]' : 'text-[#cfcfcf] hover:text-white'
+                  }`}
+                >
+                  {link.name}
+                </span>
+                {/* underline */}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-[#8b5cf6] transition-all duration-300 ${
+                    isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}
+                />
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </nav>
+  );
+}
