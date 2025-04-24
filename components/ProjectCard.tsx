@@ -1,8 +1,17 @@
 'use client';
 import { motion } from "framer-motion";
 import getimageUrl from "@/utils/image";
+import Image from "next/image";
 
-export default function ProjectCard({ title, description, image, tags, link }: any) {
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  link: string;
+}
+
+export default function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
   return (
     <motion.a
       href={link}
@@ -11,7 +20,14 @@ export default function ProjectCard({ title, description, image, tags, link }: a
       whileHover={{ scale: 1.05 }}
       className="bg-gradient-to-tr from-purple-700 to-indigo-600 text-white p-6 rounded-xl shadow-xl transform transition-all hover:shadow-2xl"
     >
-      <img src={getimageUrl(image)} alt={title} className="w-full h-48 object-cover rounded-md mb-4" />
+      <div className="relative w-full aspect-[4/3] mb-4 rounded-xl overflow-hidden">
+        <Image
+          src={getimageUrl(image)}
+          alt={title}
+          fill
+          className="object-cover rounded-xl"
+        />
+      </div>
       <h3 className="text-2xl font-bold mb-2">{title}</h3>
       <p className="text-sm mb-3 text-gray-100">{description}</p>
       <div className="flex flex-wrap gap-2">

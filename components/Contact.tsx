@@ -5,7 +5,7 @@ const Contact = () => {
     <section id="contact" className="py-20 px-8 text-white text-center">
       <h2 className="text-4xl font-bold mb-4">Ready to Make an Impact? 👋</h2>
 <p className="text-lg mb-8 text-zinc-300">
-I bring ideas to life with clean code, creativity, and a passion for solving problems. Let’s chat — if you’re looking for someone who delivers, I’m ready when you are.
+I bring ideas to life with clean code, creativity, and a passion for solving problems. Let's chat — if you're looking for someone who delivers, I'm ready when you are.
 </p>
 
       
