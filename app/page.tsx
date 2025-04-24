@@ -4,13 +4,13 @@ import Navbar from './components/Navbar';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import { Parallax } from 'react-scroll-parallax';
+import About from './components/about';
 
 export default function Home() {
   return (
     <>
       <Navbar />
-
-      <main className="bg-[#0f0f1a] min-h-screen pt-20 text-white px-6 py-12 flex flex-col justify-center items-center">
+      <main className=" min-h-screen pt-20 text-white px-6 py-12 flex flex-col justify-center items-center">
         <section className='h-screen flex flex-col justify-center items-center'>
         <motion.h2
           initial={{ opacity: 0, y: 10 }}
@@ -53,13 +53,16 @@ export default function Home() {
         </div>
         </section>
         <Parallax speed={-10} >
+          <About />
+        </Parallax>
+        <Parallax speed={-10} >
           <Projects />
         </Parallax>
         <Parallax speed={20} >
           <Contact/>
         </Parallax>
         <footer className="mt-20 text-center text-white">
-          <div className=''>Created by <span className="text-purple-500">Divij &copy;2025</span></div>
+          <div className=''>Created with 💖 by <span className="text-purple-500">Divij &copy;2025</span></div>
         </footer>
       </main>
     </>
