@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const links = [
@@ -17,7 +18,7 @@ export default function Navbar() {
       <div className="max-w-4xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo / Brand */}
         <Link href="/" className="text-2xl font-bold text-white">
-          Divij
+          <Image src="/Logo.jpg" width={36} height={36} alt='logo'/>
         </Link>
 
         {/* Nav Links */}
