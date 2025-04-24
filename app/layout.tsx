@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ParallaxWrapper from "./components/ParallexWrapper";
-import Snow from "./components/StarBackground";
+import ParallaxWrapper from "../components/ParallexWrapper";
+import Snow from "../components/StarBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

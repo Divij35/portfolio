@@ -1,34 +1,25 @@
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { FaReact, FaPython, FaNodeJs, FaCss3Alt, FaJsSquare, FaGitAlt } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript, SiNextdotjs, SiTensorflow, SiDocker, SiMongodb } from "react-icons/si";
+import TypewriterParagraph from "./TypewriterParagraph";
 
 const About = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   return (
     <section id="about" className="py-20 px-8 bg-zinc-900 text-white">
       <div className="max-w-5xl mx-auto text-center">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          ref={ref}
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <p className="text-zinc-300 text-lg mb-6 max-w-3xl mx-auto">
-            Hello! I'm Divij, a passionate Computer Science student with a strong interest in 
-            web development and artificial intelligence. Over the past few years, I've immersed 
-            myself in building web applications and exploring the complexities of AI and machine learning. 
-            My journey began with a fascination for how things work behind the scenes, and this curiosity 
-            has led me to focus on projects that involve both the development of user-friendly applications 
-            and the integration of intelligent systems.
-
-            I'm always excited to learn new technologies and tools to improve my skill set and bring ideas to life. 
-            Currently, I'm exploring Natural Language Processing (NLP) and enhancing my expertise in building 
-            scalable, efficient web applications. When I'm not coding, I enjoy staying updated on the latest trends 
-            in tech, contributing to open-source projects, and collaborating with like-minded individuals on innovative projects.
-
-            My ultimate goal is to leverage my skills to create applications that make a positive impact and contribute 
-            to the growth of technology in meaningful ways. Whether it's building a smarter web app or designing 
-            an AI model, I'm always eager to take on new challenges and expand my horizons.
-          </p>
+          <TypewriterParagraph/>
         </motion.div>
 
         <motion.div

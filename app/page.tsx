@@ -1,10 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
-import Navbar from './components/Navbar';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Navbar from '../components/Navbar';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 import { Parallax } from 'react-scroll-parallax';
-import About from './components/about';
+import About from '../components/about';
 
 export default function Home() {
   return (
