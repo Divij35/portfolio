@@ -10,7 +10,7 @@ I bring ideas to life with clean code, creativity, and a passion for solving pro
 
       
       <a
-        href="mailto:pirankardivij@example.com"
+        href="mailto:pirankardivij@gmail.com"
         className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded transition-colors duration-300 mb-6"
       >
         <FaEnvelope size={20} /> Say Hello
