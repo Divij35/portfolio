@@ -17,6 +17,25 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Divij Pirankar",
   description: "Welcome to the portfolio of Divij Pirankar, a passionate Computer Science student with expertise in web development, AI, and machine learning. Explore my projects, tech stack, and learn more about my journey in the world of technology.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+  openGraph: {
+    title: "Divij Pirankar",
+    description: "Welcome to the portfolio of Divij Pirankar, a passionate Computer Science student with expertise in web development, AI, and machine learning. Explore my projects, tech stack, and learn more about my journey in the world of technology.",
+    url: "https://divijpirankar.tech",
+    siteName: "Divij Pirankar",
+  },
+  keywords: [
+    "Divij Pirankar",
+    "Portfolio",
+    "Web Development",
+    "AI",
+    "Machine Learning",
+    "Computer Science",
+  ],
 };
 
 export default function RootLayout({
