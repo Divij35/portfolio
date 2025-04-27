@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ParallaxWrapper from "../components/ParallexWrapper";
 import Snow from "../components/StarBackground";
+import Navbar from "@/components/Navbar";
+import NextTopLoader from "nextjs-toploader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,12 +46,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth scroll-p-20">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Snow/>
-        <ParallaxWrapper>{children}</ParallaxWrapper> 
+        <Snow />
+        <ParallaxWrapper>
+          <NextTopLoader color="#9a16b4" showSpinner={false}/>
+        <Navbar />
+          {children}
+          <footer className="mt-20 text-center text-white">
+            <div className=''>Created with 💖 by <span className="text-purple-500">Divij &copy;2025</span></div>
+          </footer>
+        </ParallaxWrapper>
       </body>
     </html>
   );

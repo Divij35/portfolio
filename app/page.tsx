@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import Navbar from '@/components/Navbar';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import { Parallax } from 'react-scroll-parallax';
@@ -8,8 +7,6 @@ import About from '@/components/about';
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
       <main className=" min-h-screen pt-20 text-white px-6 py-12 flex flex-col justify-center items-center">
         <section className='h-screen flex flex-col justify-center items-center'>
         <motion.h2
@@ -40,10 +37,10 @@ export default function Home() {
             href="#projects"
             className="bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] px-6 py-3 rounded text-white font-semibold shadow-lg"
           >
-            Show my work
+            Featured Projects
           </a>
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1V0QgpH_YP2E9jucU5BC0Hrhtnea2lgzW/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-[#8b5cf6] px-6 py-3 rounded text-[#8b5cf6] font-semibold hover:bg-[#8b5cf6] hover:text-white transition"
@@ -61,10 +58,6 @@ export default function Home() {
         <Parallax speed={20} >
           <Contact/>
         </Parallax>
-        <footer className="mt-20 text-center text-white">
-          <div className=''>Created with 💖 by <span className="text-purple-500">Divij &copy;2025</span></div>
-        </footer>
       </main>
-    </>
   );
 }
