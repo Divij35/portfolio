@@ -2,6 +2,7 @@ import projects from '@/data/projects';
 import getimageUrl from '@/utils/image';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import ReactMarkdown from 'react-markdown';
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -37,7 +38,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
       <div className="mt-6">
         <h2 className="text-2xl font-semibold text-gray-200 mb-2">About this project</h2>
-        <p className="text-base text-gray-300">{project.content}</p>
+        <div className='markdown-content'>
+          <ReactMarkdown>{project.content}</ReactMarkdown>
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-2 mt-6">
@@ -57,7 +60,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             href={project.code}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-black text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-800 transition duration-300"
+            className="bg-purple-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-purple-500 transition duration-300 no-underline"
           >
             View Code
           </a>
@@ -67,7 +70,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             href={project.live}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-500 transition duration-300"
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-500 transition duration-300  no-underline"
           >
             View Live
           </a>

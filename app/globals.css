@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+.markdown-content strong {
+    color: #ffffff;
+}
