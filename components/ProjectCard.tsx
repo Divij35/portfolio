@@ -25,7 +25,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   />
 </div>
 
-        <div className="p-6">
+        <div className="p-6 h-[250px] flex flex-col justify-between">
           <h2 className="text-2xl font-semibold mb-4 text-white">{project.title}</h2>
           <p className="text-gray-300 mb-4 line-clamp-3">{project.description}</p>
           <div className="flex flex-wrap gap-2">

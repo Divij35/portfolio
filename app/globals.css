@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-.markdown-content strong {
+.markdown-content strong{
+    color: #ffffff;
+}
+
+.markdown-content h3{
     color: #ffffff;
 }
