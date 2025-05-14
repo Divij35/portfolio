@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 
 const links = [
   { name: 'Projects', href: 'projects' },
+  { name: 'Contact', href: 'mailto:pirankardivij@gmail.com' },
 ];
 
 export default function Navbar() {
