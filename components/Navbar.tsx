@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const links = [
-  { name: 'Projects', href: 'projects' },
+  { name: 'Projects', href: '/projects' },
   { name: 'Contact', href: 'mailto:pirankardivij@gmail.com' },
 ];
 
