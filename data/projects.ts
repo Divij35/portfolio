@@ -85,9 +85,76 @@ This project was built collaboratively with a teammate, where we divided work ac
 This project highlights our ability to collaborate, manage content, and deliver a visually engaging experience for a real-world event.
   `,
   featured: true,
+},
+{
+  title: "Weather App",
+  description: "A React-based weather forecast application that provides dynamic weather tips based on real-time data. Built with Zustand and OpenWeatherMap API.",
+  image: "Weather_app/cover_page.png",
+  tags: ["React", "Zustand", "Weather API", "OpenWeatherMap", "TailwindCSS"],
+  code: "https://github.com/Divij35/Weather-app",
+  live: "https://weather-app-divij.vercel.app/",
+  images: [
+    "Weather_app/main.png",
+    "Weather_app/main_light.png",
+    "Weather_app/tips.png"
+  ],
+  slug: "weather-app",
+  Date: "2024-06-03",
+  content: `
+A smart weather app that shows the current weather condition in your city.
+
+### Features
+- Zustand for simple global state management
+- TailwindCSS for responsive styling
+- Weather-based suggestions in a friendly UI
+- Fully responsive and mobile-friendly
+
+Try searching your city and get advice based on live weather data!
+  `,
+  featured: false
+},
+
+{
+  title: "Predictive Market Analysis using LSTM",
+  description: "A deep learning-based stock market prediction tool leveraging LSTM networks for time series forecasting and trend visualization.",
+  image: "predictivema/cover_page.png",
+  tags: ["Deep Learning", "LSTM", "Stock Prediction", "Time Series", "Python", "Finance", "Flask", "Chart.js"],
+  code: "https://github.com/Divij35/PredictiveMA",
+  live: "",
+  images: [
+    "predictivema/index.png",
+    "predictivema/Historical_data.png",
+    "predictivema/Predication_value.png",
+    "predictivema/Stock_relation_using_graph.png"
+  ],
+  slug: "predictive-market-analysis",
+  Date: "2024-05-25",
+  content: `
+### Overview
+
+**PredictiveMA** is a web-based application designed to forecast stock trends using LSTM (Long Short-Term Memory) neural networks. It demonstrates how historical stock data can be used for future price prediction through time series modeling.
+
+### Features
+
+- 📈 **Stock Price Prediction** using LSTM models
+- 📊 Interactive graphs via **Chart.js**
+- 🌐 Lightweight **Flask** backend for deployment
+- 🔍 View real-time and predicted data trends
+- 📂 Built with modular and extensible code
+
+### Tech Stack
+
+- Python, Flask
+- LSTM (Long Short-Term Memory Networks)
+- yFinance API
+- Chart.js
+- HTML/CSS
+  `,
+  featured: false
 }
 
-  ];
+
+];
   
   export default projects;
   
