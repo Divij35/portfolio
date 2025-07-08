@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://divijpirankar.tech"), //required for correct Open Graph URLs
   title: "Divij Pirankar",
   description: "Welcome to the portfolio of Divij Pirankar, a passionate Computer Science student with expertise in web development, AI, and machine learning. Explore my projects, tech stack, and learn more about my journey in the world of technology.",
   icons: {
@@ -29,6 +30,21 @@ export const metadata: Metadata = {
     description: "Welcome to the portfolio of Divij Pirankar, a passionate Computer Science student with expertise in web development, AI, and machine learning. Explore my projects, tech stack, and learn more about my journey in the world of technology.",
     url: "https://divijpirankar.tech",
     siteName: "Divij Pirankar",
+    images: [
+      {
+        url: "/og_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Divij Pirankar Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Divij Pirankar",
+    description: "Welcome to the portfolio of Divij Pirankar, a passionate Computer Science student with expertise in web development, AI, and machine learning. Explore my projects, tech stack, and learn more about my journey in the world of technology.",
+    images: ["/og_image.png"],
   },
   keywords: [
     "Divij Pirankar",
