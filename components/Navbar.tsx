@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 
 const links = [
   { name: 'Projects', href: '/projects' },
+  { name: 'Blogs', href: '/blog' },
   { name: 'Contact', href: 'mailto:pirankardivij@gmail.com' },
 ];
 

@@ -7,7 +7,7 @@ export default function FeaturedProjects() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 pt-36">
-        <div className="text-center mb-8 relative z-10" id='projects'>
+        <div className="text-center mb-8" id='projects'>
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white">Featured Projects</h2>
         </div>
 

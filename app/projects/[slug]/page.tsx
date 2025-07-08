@@ -3,6 +3,7 @@ import getimageUrl from '@/utils/image';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
+import ProjectGallery from './ProjectGallery';
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -78,18 +79,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </div>
 
       {project.images && project.images.length > 0 && (
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
-          {project.images.map((img, index) => (
-            <div key={index} className="relative w-full h-[250px] rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src={getimageUrl(img)}
-                alt={`${project.title} screenshot ${index + 1}`}
-                fill
-                className="object-cover rounded-xl transform transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-          ))}
-        </div>
+        <ProjectGallery title={project.title} images={project.images} />
       )}
     </div>
   );

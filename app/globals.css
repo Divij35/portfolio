@@ -8,3 +8,7 @@
 .markdown-content h3{
     color: #ffffff;
 }
+
+.section-container {
+  @apply h-screen snap-start flex items-center justify-center;
+}

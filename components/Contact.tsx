@@ -1,8 +1,8 @@
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaKaggle } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 px-8 text-white text-center">
+    <section id="contact" className="px-8 text-white text-center">
       <h2 className="text-4xl font-bold mb-4">Ready to Make an Impact? 👋</h2>
 <p className="text-lg mb-8 text-zinc-300">
 I bring ideas to life with clean code, creativity, and a passion for solving problems. Let's chat — if you're looking for someone who delivers, I'm ready when you are.
@@ -26,6 +26,10 @@ I bring ideas to life with clean code, creativity, and a passion for solving pro
         <a href="https://x.com/DivijPirankar" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
           <FaTwitter size={28} />
         </a>
+        <a href="https://www.kaggle.com/divijpirankar" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+          <FaKaggle size={28} />
+        </a>
+
       </div>
     </section>
   );

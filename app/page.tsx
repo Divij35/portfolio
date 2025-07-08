@@ -4,6 +4,7 @@ import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import { Parallax } from 'react-scroll-parallax';
 import About from '@/components/about';
+import HashnodeSection from '@/components/HashnodeSection';
 
 export default function Home() {
   return (
@@ -52,10 +53,13 @@ export default function Home() {
         <Parallax speed={-10} >
           <About />
         </Parallax>
-        <Parallax speed={-10} >
+        <Parallax speed={10} >
           <Projects />
         </Parallax>
-        <Parallax speed={20} >
+        <Parallax speed={10} >
+          <HashnodeSection />
+        </Parallax>
+        <Parallax speed={10} >
           <Contact/>
         </Parallax>
       </main>
